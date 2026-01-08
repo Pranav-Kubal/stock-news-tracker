@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 import sqlite3
 import requests
+import os
 
 app = Flask(__name__)
 DB_NAME = "database.db"
@@ -35,8 +36,7 @@ def home():
 
     return render_template("index.html", stocks=stocks)
 
-NEWS_API_KEY = "YOUR_API_KEY_HERE"
-const API_KEY = process.env.NEWS_API_KEY;
+API_KEY = os.environ.get("NEWS_API_KEY")
 
 @app.route("/news")
 def news():
