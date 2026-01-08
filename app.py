@@ -36,6 +36,7 @@ def home():
     return render_template("index.html", stocks=stocks)
 
 NEWS_API_KEY = "YOUR_API_KEY_HERE"
+const API_KEY = process.env.NEWS_API_KEY;
 
 @app.route("/news")
 def news():
@@ -50,7 +51,7 @@ def news():
         "q": " OR ".join(stocks),
         "language": "en",
         "sortBy": "publishedAt",
-        "apiKey": NEWS_API_KEY
+        "apiKey": API_KEY
     }
 
 
