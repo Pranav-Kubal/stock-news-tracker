@@ -1,8 +1,29 @@
-# Stock News Tracker 📈📰
+# 📈 Stock News Tracker
 
-## Description
+A Flask-based web application that provides personalized stock market news based on a user-defined watchlist.  
+The app filters real-time financial news and displays only relevant updates, helping users avoid information overload.
 
-Stock News Tracker is a simple application that allows users to track the latest news related to specific stocks of their choice.  
-Instead of manually searching for news, users can create a personal watchlist and get relevant stock-related news in one place.
+## 🚀 Features
 
-This project is built as a beginner-friendly resume project to understand APIs, data fetching, and basic backend logic.
+- Add and manage stock watchlist
+- Fetch real-time stock market news using News API
+- Filter news based on portfolio/watchlist stocks
+- Stock-wise grouped news display
+- Clean and minimal UI
+- SQLite database for persistence
+
+## 🛠️ Tech Stack
+
+- Backend: Python (Flask)
+- Frontend: HTML, CSS, JavaScript
+- Database: SQLite
+- APIs: NewsAPI
+
+## ▶️ How to Run Locally
+
+```bash
+git clone https://github.com/Pranav-Kubal/stock-news-tracker.git
+cd stock-news-tracker
+pip install -r requirements.txt
+python app.py
+```

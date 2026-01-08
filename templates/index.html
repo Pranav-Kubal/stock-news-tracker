@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stock Watchlist</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>My Stock Watchlist</h1>
+
+    <form method="POST">
+      <input
+        type="text"
+        name="stock"
+        placeholder="Enter stock name (e.g. TCS)"
+        required
+      />
+      <button type="submit">Add Stock</button>
+    </form>
+
+    <h3>Watchlist</h3>
+    <ul>
+      {% for stock in stocks %}
+      <li>
+        {{ stock["stock_name"] }}
+        <a href="/delete/{{ stock['id'] }}">❌</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <br />
+    <a href="/news">View Related News 📰</a>
+  </body>
+</html>

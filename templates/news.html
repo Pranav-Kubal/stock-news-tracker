@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stock News</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Stock-wise Related News</h1>
+
+    {% if news %} {% for stock, articles in news.items() %}
+    <h2>{{ stock }}</h2>
+    <ul>
+      {% for article in articles %}
+      <li>
+        <a href="{{ article.url }}" target="_blank"> {{ article.title }} </a>
+        <br />
+        <small>Source: {{ article.source }}</small>
+      </li>
+      {% endfor %}
+    </ul>
+    <hr />
+    {% endfor %} {% else %}
+    <p>No related news found.</p>
+    {% endif %}
+
+    <a href="/">⬅ Back to Watchlist</a>
+  </body>
+</html>
