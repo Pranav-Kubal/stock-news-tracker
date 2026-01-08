@@ -35,7 +35,7 @@ def home():
 
     return render_template("index.html", stocks=stocks)
 
-NEWS_API_KEY = "1b88f00ee352491899eb84bf29eab24a"
+NEWS_API_KEY = "YOUR_API_KEY_HERE"
 
 @app.route("/news")
 def news():
